@@ -1,3 +1,4 @@
+# Esse workflow roda testes e executa a aplicação Go
 name: ci-golang-workflow
 
 on:
