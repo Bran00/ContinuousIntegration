@@ -1,4 +1,5 @@
 name: ci-golang-workflow
+
 on: 
   pull_request:
     branches:
@@ -7,14 +8,22 @@ on:
 jobs: 
   check-application:
     runs-on: ubuntu-latest
+
     steps:
+      - name: Checkout repository
         uses: actions/checkout@v2
+
+      - name: Setup Go
         uses: actions/setup-go@v2
         with:
           go-version: '1.24'
+
+      - name: Run tests
         run: |
           cd GOAPP_ALUNO
           go test ./...
+
+      - name: Run application
         run: |
           cd GOAPP_ALUNO
           go run math.go
