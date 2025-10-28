@@ -2,6 +2,7 @@
 name: ci-golang-workflow
 
 on:
+  # Roda quando há push ou PR para a branch develop
   pull_request:
     branches:
       - develop
