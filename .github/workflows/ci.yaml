@@ -44,5 +44,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: false
-          tags: bran00/continuousIntegration:latest
+          tags: bran00/continuousintegration:latest
 
